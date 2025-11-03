@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/googlefonts/1.0.0/css/roboto.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-8">
+          <div class="main-container">
+            <h1 class="game-title text-center mb-4">
+              <i class="fas fa-gamepad me-2"></i>TIC TAC TOE
+            </h1>
+
+            <div class="row game-board">
+              <div class="col-lg-5 col-md-6 col-sm-10 col-12 p-4 mx-auto">
+                <div class="board" id="board">
+                  <div
+                    class="cell border-2 border-dark border-end border-bottom"
+                    data-index="0"
+                  ></div>
+                  <div
+                    class="cell border-2 border-dark border-end border-bottom"
+                    data-index="1"
+                  ></div>
+                  <div
+                    class="cell border-2 border-dark border-bottom"
+                    data-index="2"
+                  ></div>
+                  <div
+                    class="cell border-2 border-dark border-end border-bottom"
+                    data-index="3"
+                  ></div>
+                  <div
+                    class="cell border-2 border-dark border-end border-bottom"
+                    data-index="4"
+                  ></div>
+                  <div
+                    class="cell border-2 border-dark border-bottom"
+                    data-index="5"
+                  ></div>
+                  <div
+                    class="cell border-2 border-dark border-end"
+                    data-index="6"
+                  ></div>
+                  <div
+                    class="cell border-2 border-dark border-end"
+                    data-index="7"
+                  ></div>
+                  <div class="cell border-2 border-dark" data-index="8"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row game-info">
+              <div class="col-lg-10 col-md-10 col-sm-10 col-12 mx-auto">
+                <div class="row">
+                  <div class="col-3">
+                    <div
+                      class="player-info text-center playerX"
+                      id="player-status"
+                    >
+                      <div class="player">PLAYER ❌</div>
+                      <div class="score" id="status">0</div>
+                    </div>
+                  </div>
+                  <div class="col-3 text-center">
+                    <div class="game-status text-center">
+                      <div class="player">DRAWS</div>
+                      <div class="score" id="draw-count">0</div>
+                    </div>
+                  </div>
+                  <div class="col-3 text-center">
+                    <div
+                      class="game-status text-center playerO not-active"
+                      id="player-status"
+                    >
+                      <div class="player" id="player-o">PLAYER 🟢</div>
+                      <div class="score" id="status">0</div>
+                    </div>
+                  </div>
+                  <div class="col-3 text-center">
+                    <div class="game-status text-center" id="users">
+                      <div class="player">USERS</div>
+                      <div class="score" id="users-count">2P</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Winner Modal -->
+            <div
+              class="modal fade"
+              id="winnerModal"
+              tabindex="-1"
+              data-bs-backdrop="static"
+              aria-labelledby="winnerModalLabel"
+              insert
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <h2 class="text-center" id="winnerText"></h2>
+                  </div>
+                  <div class="modal-footer border-0 justify-content-center">
+                    <button
+                      type="button"
+                      class="btn btn-danger rounded-pill px-4"
+                      id="restartBtn"
+                    >
+                      Restart
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-success rounded-pill px-4"
+                      id="playAgainBtn"
+                    >
+                      Play Again
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap and game JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
